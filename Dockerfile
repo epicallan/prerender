@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:6.9.4-alpine
 
 RUN mkdir /src
 
