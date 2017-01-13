@@ -93,7 +93,7 @@ Keep in mind you will see 504s for relative URLs because the actual domain on th
 	$ cd prerender
 	$ heroku create
 	$ git push heroku master
-	
+
 >If you are installing Prerender under a Windows environment and you encounter errors related to 'node-gyp', you may need to follow these additional steps:
 >https://github.com/nodejs/node-gyp#installation
 
@@ -370,7 +370,7 @@ so that you don't need to export your AWS credentials.
 > You can also export the S3_PREFIX_KEY variable so that the key (which is by default the complete requested URL) is
 prefixed. This is useful if you want to organize the snapshots in the same bucket.
 
-#### Region 
+#### Region
 
 
 By default, s3HtmlCache works with the US Standard region (East), if your bucket is localized in another region you can config it with an environment variable : `AWS_REGION`.
@@ -422,6 +422,14 @@ Caches pages in a levelDB database. Available at [prerender-level-cache](https:/
 
 Create access log file for prerendered requests. Available at [prerender-access-log](https://github.com/unDemian/prerender-access-log) by [@unDemian](https://github.com/unDemian)
 
+### Running with docker
+
+```
+docker build -t prerender .
+
+docker run  -t -i -p 7979:7979 --name  prerender-app -d prerender-service
+
+```
 
 ## License
 
