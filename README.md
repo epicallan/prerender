@@ -427,7 +427,7 @@ Create access log file for prerendered requests. Available at [prerender-access-
 ```
 docker build -t prerender .
 
-docker run  -t -i -p 7979:7979 --name  prerender-app -d prerender-service
+docker run  -t -i -p 7979:7979 --name  prerender-app -d prerender
 
 ```
 
